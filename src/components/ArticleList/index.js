@@ -2,24 +2,23 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import Article from "../Article";
+import Accordion from "../../decorators/Accordion";
 
-export default class ArticleList extends React.Component {
+class ArticleList extends React.Component {
   static propTypes = {
-    articles: PropTypes.array.isRequired,
-    openedID: PropTypes.number.isRequired,
-    fnChangeID: PropTypes.func.isRequired
+    articles: PropTypes.array.isRequired
   };
 
   static defaultProps = {
-    article: []
+    articles: []
   }
   render(){
     const body = this.props.articles.map(article => (
       <li key={article.id}>
         <Article
           article={article}
-          openedID={this.props.openedID}
-          fnChangeID={this.props.fnChangeID}
+          isOpen={this.props.openedID === +article.id}
+          changeOpenedID={this.props.changeOpenedID}
         />
       </li>
     ));
@@ -27,3 +26,5 @@ export default class ArticleList extends React.Component {
     return <div>{body}</div>;
   }
 }
+
+export default Accordion(ArticleList)

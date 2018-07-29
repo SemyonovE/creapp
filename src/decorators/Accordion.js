@@ -1,6 +1,6 @@
 import React from "react";
 
-export default Component => {
+export default Component =>
   class AccordionWrapper extends React.Component {
     state = {
       openedID: null
@@ -28,5 +28,4 @@ export default Component => {
         />
       );
     }
-  }
-};
+  };
