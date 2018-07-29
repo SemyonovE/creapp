@@ -1,5 +1,5 @@
 import React from 'react';
-import ArticleList from './ArticleList'
+import ArticleList from './components/ArticleList'
 import './App.css';
 
 import articles from './articles.json'
