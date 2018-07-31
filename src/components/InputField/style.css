@@ -1,0 +1,11 @@
+input {
+  border-width: 3px;
+}
+
+input.form-valid {
+  border: 3px solid green;
+}
+
+input.form-unvalid {
+  border: 3px solid red;
+}

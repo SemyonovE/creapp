@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import toggleOpenClose from "../../decorators/ToggleOpenClose"
 import Comment from "../Comment";
+import AddCommentForm from "../AddCommentForm";
 
 class CommentsList extends React.Component {
   static propTypes = {
@@ -31,12 +32,15 @@ class CommentsList extends React.Component {
         <section>
           {isOpen ? (
             comments.length > 0 ? (
-              <ul>
-                {" "}
-                {comments.map(comment => (
-                  <Comment key={id + comment} comment={comment} />
-                ))}{" "}
-              </ul>
+              <div>
+                <AddCommentForm />
+                <ul>
+                  {" "}
+                  {comments.map(comment => (
+                    <Comment key={id + comment} comment={comment} />
+                  ))}{" "}
+                </ul>
+              </div>
             ) : (
               "no comments"
             )

@@ -18,6 +18,10 @@ export default class Article extends React.Component {
     article: []
   };
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.isOpen !== this.props.isOpen;
+  }
+
   render() {
     const { article, isOpen, changeOpenedID } = this.props;
     return (
