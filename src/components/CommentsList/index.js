@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from 'prop-types'
 
-import ToggleOpenClose from "../../decorators/ToggleOpenClose"
+import toggleOpenClose from "../../decorators/ToggleOpenClose"
 import Comment from "../Comment";
 
 class CommentsList extends React.Component {
   static propTypes = {
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     comments: PropTypes.arrayOf(PropTypes.string),
+    //from ToggleOpenClose
     isOpen: PropTypes.bool,
     handleClick: PropTypes.func
   }
@@ -46,4 +47,4 @@ class CommentsList extends React.Component {
   }
 }
 
-export default ToggleOpenClose(CommentsList)
+export default toggleOpenClose(CommentsList)
