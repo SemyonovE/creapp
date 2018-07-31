@@ -6,7 +6,10 @@ import Accordion from "../../decorators/Accordion";
 
 class ArticleList extends React.Component {
   static propTypes = {
-    articles: PropTypes.array.isRequired
+    articles: PropTypes.array.isRequired,
+    //from Accordion
+    OpenedID: PropTypes.number, 
+    changeOpenedID: PropTypes.func
   };
 
   static defaultProps = {

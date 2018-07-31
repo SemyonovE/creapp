@@ -8,6 +8,7 @@ class CommentsList extends React.Component {
   static propTypes = {
     id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     comments: PropTypes.arrayOf(PropTypes.string),
+    //from ToggleOpenClose
     isOpen: PropTypes.bool,
     handleClick: PropTypes.func
   }
